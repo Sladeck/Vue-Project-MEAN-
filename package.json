@@ -1,0 +1,17 @@
+{
+  "name": "project-vue-mean",
+  "version": "1.0.0",
+  "description": "Projet 1 avec vuejs, cours mean 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "live-server": "^1.2.0",
+    "materialize-css": "^0.100.2",
+    "vue": "^2.4.4"
+  }
+}
