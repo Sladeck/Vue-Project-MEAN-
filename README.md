@@ -8,6 +8,7 @@ How to install :
  - Download or clone the project
  - Install the project with the "npm install" command line
  - Download live-server with the "npm install -g live-server"
+ - Run the "live-server" command line in your project
 
 
  > This project is only the beginning of "VueJs" learning.
