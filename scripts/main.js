@@ -1,8 +1,27 @@
 {
   'use strict';
 
+  const Task = {
+    props: ["task", "index"],
+    template: `
+    <li class='collection-item'>
+        <input type="checkbox" v-bind:id="'t_' + (index + 1)" v-model:checked="task.isDone">
+        <label v-bind:for="'t_' + (index + 1)">{{ task.title }}</label>
+        <a href="#" class="link-delete" title="Supprimer cette tâche">
+            <i class="small material-icons" v-on:click.prevent="deletetask(index)">delete_forever</i>
+        </a>
+    </li>
+    `,
+    methods: {
+      deletetask : function(index) {
+        this.$emit('deletetask', index);
+      }
+    }
+  }
+
   new Vue ({
     el : 'main#app',
+    components: {'task': Task},
     data : {
       tasks : [
           {title : "Apprendre le Japonais", isDone : true},

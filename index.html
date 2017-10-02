@@ -38,13 +38,7 @@
 
     <ul class="collection">
 
-        <li class="collection-item" v-for="(task, index) in tasks">
-            <input type="checkbox" v-bind:id="'t_' + (index + 1)" v-model:checked="task.isDone">
-            <label v-bind:for="'t_' + (index + 1)">{{ task.title }}</label>
-            <a href="#" class="link-delete" title="Supprimer cette tâche">
-                <i class="small material-icons" v-on:click="removeTask(index)">delete_forever</i>
-            </a>
-        </li>
+        <task v-for="(task, index) in tasks" v-bind:task="task" v-bind:index="index" :key="index" @deletetask="removeTask"></task>
     </ul>
 
 </main><!-- Fin de l'app Vue.js -->
